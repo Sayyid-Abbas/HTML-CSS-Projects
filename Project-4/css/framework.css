@@ -1,0 +1,131 @@
+/* #region Start Box */
+.d-flex {
+	display: flex;
+}
+.align-center {
+	align-items: center;
+}
+.d-grid {
+	display: grid;
+}
+.gap-20 {
+	gap: 20px;
+}
+.w-full {
+	width: 100%;
+}
+@media (max-width: 767px) {
+	.block-mobile {
+		display: block;
+	}	
+}
+/* #endregion End Box */
+/* #region Start Pdding + Margin */
+.p-10 {
+	padding: 10px;
+}
+.p-15 {
+	padding: 15px;
+}
+.p-20 {
+	padding: 20px;
+}
+.m-20 {
+	margin: 20px;
+}
+.mt-0 {
+	margin-top: 0;
+}
+.mr-10 {
+	margin-left: 10px;
+}
+.ml-10 {
+	margin-right: 10px;
+}
+.mr-20 {
+	margin-left: 20px;
+}
+.ml-20 {
+	margin-right: 20px;
+}
+/* #endregion End Pdding + Margin */
+/* #region Start Color */
+.bg-white {
+	background-color: white;
+}
+.c-black {
+	color: black;
+}
+/* #endregion End Color */
+/* #region Start Position */
+.p-relative {
+	position: relative;
+}
+.p-absolute {
+	position: absolute;
+}
+/* #endregion End Position */
+/* #region Start Font */
+.txt-c {
+	text-align: center;
+}
+.fs-14 {
+	font-size: 14px;
+}
+@media (max-width: 767px) {
+	.txt-c-mobile {
+		text-align: center;
+	}	
+}
+/* #endregion End Font */
+/* #region Start Border */
+.rad-6 {
+	border-radius: 6px;
+}
+.rad-10 {
+	border-radius: 10px;
+}
+/* #endregion End Border */
+/* #region Start Mobile */
+@media (max-width: 767px) {
+	.hide-mobile {
+		display: none;
+	}
+}
+/* #endregion End Mobile */
+/* #region Start Components */
+.between-flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.main-title {
+	width: fit-content;
+	position: relative;
+	padding-left: 20px;
+	transition: letter-spacing var(--transition-duration);
+}
+.main-title:hover {
+	letter-spacing: 1px;
+}
+.main-title::before,
+.main-title::after {
+	content: "";
+	height: 3px;
+	position: absolute;
+	left: 20px;
+	bottom: -10px;	
+}
+.main-title::before {
+	background-color: white;
+	width: 80%;
+}
+.main-title::after {
+	background-color: black;
+	width: 25%;
+	transition-duration: var(--transition-duration);
+}
+.main-title:hover::after {
+	width: 80%;
+}
+/* #endregion End Components */
