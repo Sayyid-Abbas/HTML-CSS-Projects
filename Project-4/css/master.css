@@ -455,8 +455,173 @@ header .icons img {
   width: 200px;
 }
 /* #endregion End Last Project Progress */
-
+/* #region Start Reminders */
+.reminders ul li {
+  padding-left: 30px;
+  transition: var(--transition-duration);
+}
+.reminders ul li:hover {
+  padding-left: 35px;
+}
+.reminders ul li::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 20px;
+}
+.reminders ul li:nth-child(1)::before {
+  background-color: var(--blue-color);
+}
+.reminders ul li:nth-child(2)::before {
+  background-color: var(--green-color);
+}
+.reminders ul li:nth-child(3)::before {
+  background-color: var(--orange-color);
+}
+.reminders ul li:nth-child(4)::before {
+  background-color: var(--red-color);
+}
+.reminders ul li::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: white;
+}
+.reminders ul li:nth-child(1)::after {
+  background-color: var(--blue-color);
+}
+.reminders ul li:nth-child(2)::after {
+  background-color: var(--green-color);
+}
+.reminders ul li:nth-child(3)::after {
+  background-color: var(--orange-color);
+}
+.reminders ul li:nth-child(4)::after {
+  background-color: var(--red-color);
+}
+/* #endregion End Remiders */
+/* #region Start Latest Post */
+.latest-post .author {
+  justify-content: flex-end;
+}
+.latest-post .content {
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  min-height: 150px;
+  line-height: 1.6;
+  font-size: 19px;
+}
+.latest-post .author img {
+  width: 60px;
+}
+/* #endregion End Latest Post */
+/* #region Start Social Media Stats */
+.social-stats .box {
+  height: 60px;
+  padding-left: 0px;
+}
+.social-stats .twitter {
+  background-color: rgb(29 161 242 / 20%);
+}
+.social-stats .facebook {
+  background-color: rgb(24 119 242 / 20%);
+}
+.social-stats .youtube {
+  background-color: rgb(255 0 0 / 20%);
+}
+.social-stats .linkedin {
+  background-color: rgb(0 119 181 / 20%);
+}
+.social-stats .box .social i {
+  height: 60px;
+  width: 60px;
+  transition-duration: var(--transition-duration);
+}
+.social-stats .box .social i:hover {
+  transform: rotate(5deg);
+}
+.social-stats .twitter .button,
+.social-stats .twitter .social i {
+  background-color: #1da1f2;
+}
+.social-stats .facebook .button,
+.social-stats .facebook .social i {
+  background-color: #1877f2;
+}
+.social-stats .youtube .button,
+.social-stats .youtube .social i {
+  background-color: red;
+}
+.social-stats .linkedin .social i {
+  background-color: #0077b5;
+  font-size: 35px;
+}
+.social-stats .box .social i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.social-stats .box .button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.social-stats  .linkedin .button {
+  background-color: #0077b5;
+}
+/* face #1877f2
+link #0077b5
+ */
+/* #endregion End Social Media Stats */
 /* #endregion End Wrapper */
+/* #region Start Projects Table */
+.projects .responsive-table {
+  overflow-x: auto;
+}
+.projects table {
+  min-width: 1000px;
+  border-spacing: 0;
+}
+.projects tbody tr:hover td {
+  background-color: #FAF7F7;
+}
+.projects table td {
+  padding: 15px;
+}
+.projects thead td {
+  background-color: #EEE;
+  font-weight: bold;
+  transition-duration: var(--transition-duration);
+}
+.projects tbody td {
+  border-left: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+}
+.projects tbody tr td:last-child {
+  border-right: 1px solid #EEE;
+}
+.projects .responsive-table table tbody tr td img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.projects tbody img:not(:last-child) {
+  margin-right: -20px;
+}
+.projects table .label {
+  padding: 5px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+/* #endregion End Projects Table */
 /* #endregion End Content */
 /* #endregion End Page */
 /* #region Start Animation */
