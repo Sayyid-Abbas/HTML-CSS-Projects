@@ -58,6 +58,15 @@
 .p-20 {
 	padding: 20px;
 }
+.pt-20 {
+	padding-top: 20px;
+}
+.pb-20 {
+	padding-bottom: 20px;
+}
+.pl-20 {
+	padding-left: 20px;
+}
 .m-0 {
 	margin: 0;
 }
@@ -84,6 +93,9 @@
 }
 .mb-20 {
 	margin-bottom: 20px;
+}
+.mb-25 {
+	margin-bottom: 25px;
 }
 .ml-10 {
 	margin-left: 10px;
@@ -168,6 +180,9 @@
 }
 .fs-14 {
 	font-size: 14px;
+}
+.fs-16 {
+	font-size: 16px;
 }
 .fs-24 {
 	font-size: 24px;
