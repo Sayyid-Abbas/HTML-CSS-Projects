@@ -23,49 +23,49 @@
           <li>
             <a class="active d-flex align-center fs-14 c-black rad-6 p-10" href="index.html">
               <i class="fa-solid fa-solar-panel fa-fw"></i>
-              <span class="hide-mobile mr-10 fs-14">Dashboard</span>
+              <span class="hide-mobile ml-10 fs-14">Dashboard</span>
           </a>
         </li>
           <li>
             <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="settings.html">
               <i class="fa-solid fa-gear fa-fw"></i>
-              <span class="hide-mobile mr-10 fs-14">Settings</span>
+              <span class="hide-mobile ml-10 fs-14">Settings</span>
           </a>
         </li>
           <li>
             <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="profile.html">
               <i class="fa-regular fa-user fa-fw"></i>
-              <span class="hide-mobile mr-10 fs-14">Profile</span>
+              <span class="hide-mobile ml-10 fs-14">Profile</span>
           </a>
         </li>
           <li>
             <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="projects.html">
               <i class="fa-solid fa-diagram-project fa-fw"></i>
-              <span class="hide-mobile mr-10 fs-14">Projects</span>
+              <span class="hide-mobile ml-10 fs-14">Projects</span>
             </a>
           </li>
           <li>
             <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="courses.html">
               <i class="fa-solid fa-graduation-cap fa-fw"></i>
-              <span class="hide-mobile mr-10 fs-14">Courses</span>
+              <span class="hide-mobile ml-10 fs-14">Courses</span>
             </a>
           </li>
           <li>
             <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="friends.html">
               <i class="fa-regular fa-circle-user fa-fw"></i>
-              <span class="hide-mobile mr-10 fs-14">Friends</span>
+              <span class="hide-mobile ml-10 fs-14">Friends</span>
             </a>
           </li>
           <li>
             <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="files.html">
               <i class="fa-regular fa-file fa-fw"></i>
-              <span class="hide-mobile mr-10 fs-14">Files</span>
+              <span class="hide-mobile ml-10 fs-14">Files</span>
             </a>
           </li>
           <li>
             <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="plans.html">
               <i class="fa-regular fa-credit-card fa-fw"></i>
-              <span class="hide-mobile mr-10 fs-14">Plans</span>
+              <span class="hide-mobile ml-10 fs-14">Plans</span>
             </a>
           </li>
         </ul>
@@ -76,22 +76,153 @@
           <div class="search p-relative">
             <input class="rad-10 p-10" type="search" name="keyword" placeholder="Type A Keyword">
           </div>
-          <div class="icons d-flex align-center">
+          <div class="icons d-flex align-center gap-20">
             <i class="p-relative fa-regular fa-bell fa-lg"></i>
             <img class="mr-10" src="images/avatar.png" alt="">
           </div>
          </header>
         <!-- #endregion End Head -->
         <!-- #region Main Title -->
-         <h1 class="main-title">Dashboard</h1>
+          <h1 class="main-title">Dashboard</h1>
         <!-- #endregion Main Title -->
-        <!-- #region Start Wrapper -->
-         <div class="wrapper d-grid gap-20">
-          <div class="welcome bg-white rad-10 txt-c-mobile">
-            <h2>Welcome</h2>
+        <!-- #region Start wrapper -->
+          <div class="wrapper d-grid gap-20">
+            <!-- #region Start Welcome -->
+              <div class="welcome bg-white rad-10 txt-c-mobile over-hidden">
+                <div class="intro between-flex p-relative p-20 bg-eee">
+                  <div class="head">
+                    <h3 class="m-0 fs-24">Welcome</h3>
+                    <p class="c-grey">Elzero</p>
+                  </div>
+                  <div class="image hide-mobile">
+                    <img src="images/welcome.png" alt="">
+                  </div>
+                </div>
+                <img src="images/avatar.png" alt="" class="avatar">
+                <div class="info between-flex p-20 txt-c">
+                  <div class="name">
+                    <h4>Osama Elzero</h4>
+                    <p class="c-grey fs-14">Developer</p>
+                  </div>
+                  <div class="work">
+                    <h4>80</h4>
+                    <p class="c-grey fs-14">Projects</p>
+                  </div>
+                  <div class="money">
+                    <h4>$8500</h4>
+                    <p class="c-grey fs-14">Earned</p>
+                  </div>
+                </div>
+                <a href="profile.html" class="link c-white bg-blue rad-6 fs-14">Profile</a>
+              </div>
+            <!-- #endregion End Welcome -->
+            <!-- #region Start Quick Draft -->
+              <div class="quick-draft p-20 bg-white rad-10 txt-c-mobile over-hidden">
+                <div class="head">
+                  <h3 class="m-0 fs-24">Quick Draft</h3>
+                  <p class="c-grey">Write A Draft For Your Ideas</p>
+                </div>
+                <form action="">
+                  <input type="text" name="title" placeholder="Title" class="w-full mb-20 p-10 rad-6 bg-eee">
+                  <textarea name="content" placeholder="Your Thoughts" class="w-full rad-6 p-10 bg-eee"></textarea>
+                  <input type="submit" value="Save" class="bg-blue c-white rad-6 fs-14">
+                </form>
+              </div>
+            <!-- #endregion Start Quick Draft -->
+            <!-- #region Start Yearly Targets -->
+              <div class="yearly-targets bg-white p-20 rad-10">
+                <div class="head">
+                  <h3 class="m-0 fs-24">Yearly Targets</h3>
+                  <p class="c-grey">Targets Of The Year</p>
+                </div>
+                <div class="box">
+                  <div class="progress d-flex gap-20 align-center">
+                    <i class="fa-solid fa-dollar-sign fa-lg c-blue p-relative mb-10 bg-blue-light"></i>
+                    <div class="prog flex-1">
+                      <div class="label">
+                        <h4 class="c-grey fs-14 fw-normal m-0 mb-10">Money</h4>
+                        <span class="fw-bold mb-10 d-block">$20.000</span>
+                      </div>
+                      <div class="line w-full bg-blue-light">
+                        <div style="width: 80%" class="bg-blue d-block p-relative">
+                          <span class="c-white bg-blue rad-6 fs-14">80%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress d-flex gap-20 align-center">
+                    <i class="fa-solid fa-code fa-lg c-orange p-relative mb-10 bg-orange-light"></i>
+                    <div class="prog flex-1">
+                      <div class="label">
+                        <h4 class="c-grey fs-14 fw-normal m-0 mb-10">Projects</h4>
+                        <span class="fw-bold mb-10 d-block">44</span>
+                      </div>
+                      <div class="line w-full bg-orange-light">
+                        <div style="width: 55%" class="bg-orange d-block p-relative">
+                          <span class="c-white bg-orange rad-6 fs-14">55%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress d-flex gap-20 align-center">
+                    <i class="fa-solid fa-user fa-lg c-green p-relative mb-10 bg-green-light"></i>
+                    <div class="prog flex-1">
+                      <div class="label">
+                        <h4 class="c-grey fs-14 fw-normal m-0 mb-10">Team</h4>
+                        <span class="fw-bold mb-10 d-block">12</span>
+                      </div>
+                      <div class="line w-full bg-green-light">
+                        <div style="width: 75%" class="bg-green d-block p-relative">
+                          <span class="c-white bg-green rad-6 fs-14">75%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- #endregion End Yearly Targets -->
+            <!-- #region Start Tickets Statistics -->
+              <div class="tickets bg-white p-20 rad-10">
+                <div class="head">
+                  <h3 class="m-0 fs-24">Tickets Statistics</h3>
+                  <p class="c-grey">Everything About Support Tickets 2500 Total</p>
+                </div>
+                <div class="box d-grid gap-20">
+                  <div class="element d-flex rad-10">
+                    <i class="mt-20 fa-regular fa-rectangle-list fa-2x mb-10 c-orange"></i>
+                    <h3 class="m-0 fs-24">2500</h3>
+                    <p class="c-grey fs-14">Total</p>
+                  </div>
+                  <div class="element d-flex rad-10">
+                    <i class="mt-20 fa-solid fa-spinner fa-2x mb-10 c-blue"></i>
+                    <h3 class="m-0 fs-24">500</h3>
+                    <p class="c-grey fs-14">Pendding</p>
+                  </div>
+                  <div class="element d-flex rad-10">
+                    <i class="mt-20 fa-regular fa-circle-check fa-2x mb-10 c-green"></i>
+                    <h3 class="m-0 fs-24">1900</h3>
+                    <p class="c-grey fs-14">Closed</p>
+                  </div>
+                  <div class="element d-flex rad-10">
+                    <i class="mt-10 fa-regular fa-rectangle-xmark fa-2x mb-10 c-red"></i>
+                    <h3 class="m-0 fs-24">2500</h3>
+                    <p class="c-grey fs-14">Total</p>
+                  </div>
+                </div>
+              </div>
+            <!-- #endregion End Tickets Statistics -->
+            <!-- #region Start Latest News -->
+              <div class="latest-news p-20 rad-10 bg-white">
+                <div class="head">
+                  <h3 class="m-0 fs-24">Tickets Statistics</h3>
+                </div>
+                <div class="holder">
+                  
+                </div>
+              </div>
+            <!-- #endregion End Latest News -->
           </div>
-         </div>
-        <!-- #endregion End Wrapper -->
+        <!-- #endregion End wrapper -->
       </div>
     </div>
   </body>

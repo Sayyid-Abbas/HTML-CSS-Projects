@@ -1,10 +1,14 @@
 /* #region Start Global Rules  */
 :root {
   --blue-color: #0075FF;
+  --blue-color-light: rgb(0 117 255 / 20%);
   --blue-alt-color: #0d69d5;
   --orange-color: #f59e0b;
+  --orange-color-light: rgb(245 158 11 / 20%);
   --green-color: #22c55e;
+  --green-color-light: rgb(34 197 94 / 20%);
   --red-color: #f44336;
+  --red-color-light: rgb(244 67 54 / 20%);
   --grey-color: #888;
   --transition-duration: 0.3s;
   --awesome-family: "Font Awesome 5 Free";
@@ -176,6 +180,141 @@ header .icons img {
     gap: 10px;
   }
 }
+/* #region Start Welcome */
+.welcome .intro .image img {
+  width: 200px;
+}
+.welcome .avatar {
+  width: 64px;
+  border: 2px solid white;
+  margin-top: -32px;
+  margin-left: 10px;
+  box-shadow: 0px 0px 5px #DDD;
+  border-radius: 50%;
+  position: relative;
+}
+.welcome .info {
+  justify-content: space-around;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 25px;
+}
+.welcome .info h4 {
+  font-weight: bold;
+  font-size: 17px;
+  margin: 0;
+}
+.welcome .link {
+  display: block;
+  width: fit-content;
+  margin: 20px 20px 10px auto;
+  padding: 5px 10px;
+  transition-duration: var(--transition-duration);
+}
+.welcome .link:hover {
+  background-color: var(--blue-alt-color);
+}
+@media (max-width: 767px) {
+  .welcome .info {
+    flex-direction: column;
+  }
+  .welcome .avatar {
+    margin-left: 0px;
+  }
+  .welcome .info > div:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+/* #endregion End Welcome */
+/* #region Start Quick Draft */
+.quick-draft form input[type="text"],
+.quick-draft form textarea {
+  border: none;
+}
+.quick-draft form textarea {
+  height: 175px;
+  resize: none;
+}
+.quick-draft form input[type="submit"] {
+  display: block;
+  border: none;
+  margin: 10px 10px 30px auto;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+}
+.quick-draft form input[type="submit"]:hover {
+  background-color: var(--blue-alt-color);
+}
+/* #endregion End Quick Draft */
+/* #region Start Yearly Targets */
+.yearly-targets .box .progress i {
+  width: 80px;
+  height: 80px;
+}
+.yearly-targets .box .progress i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: var(--transition-duration);
+}
+.yearly-targets .box .progress i:hover::before {
+  transform: rotate(25deg) translate(-50%, -50%);
+}
+.yearly-targets .box .progress .line div {
+  height: 4px;
+}
+.yearly-targets .box .progress .line div span {
+  position: absolute;
+  right: -18px;
+  top: -35px;
+  padding: 2px 5px;
+}
+.yearly-targets .box .progress .line div span::before {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 7px;
+  border-color: transparent;
+  border-style: solid;
+  transition-duration: var(--transition-duration);
+}
+.yearly-targets .box .progress .line div span:hover::before {
+  bottom: -22px;
+}
+.yearly-targets .box .progress:nth-child(1) .line div span::before {
+  border-top-color: var(--blue-color);
+}
+.yearly-targets .box .progress:nth-child(2) .line div span::before {
+  border-top-color: var(--orange-color);
+}
+.yearly-targets .box .progress:nth-child(3) .line div span::before {
+  border-top-color: var(--green-color);
+}
+/* #endregion End Yearly Targets */
+/* #region Start Tickets */
+.tickets .box {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+}
+@media (max-width: 767px) {
+  .tickets .box  {
+  grid-template-columns: 1fr;
+  }
+}
+.tickets .box .element {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  transition-duration: var(--transition-duration);
+}
+.tickets .box .element:hover {
+  background-color: #fafafa;
+}
+/* #endregion End Tickets */
 /* #endregion End Wrapper */
 /* #region Start Animation */
 @keyframes up-down {
