@@ -58,11 +58,23 @@
 .p-20 {
 	padding: 20px;
 }
+.pt-5 {
+	padding-top: 5px;
+}
 .pt-20 {
 	padding-top: 20px;
 }
+.pb-5 {
+	padding-bottom: 5px;
+}
 .pb-20 {
 	padding-bottom: 20px;
+}
+.pl-5 {
+	padding-left: 5px;
+}
+.pl-10 {
+	padding-left: 10px;
 }
 .pl-20 {
 	padding-left: 20px;
@@ -90,6 +102,9 @@
 }
 .mb-10 {
 	margin-bottom: 10px;
+}
+.mb-15 {
+  margin-bottom: 15px;
 }
 .mb-20 {
 	margin-bottom: 20px;
@@ -184,6 +199,9 @@
 .fs-14 {
 	font-size: 14px;
 }
+.fs-15 {
+  font-size: 15px;
+}
 .fs-16 {
 	font-size: 16px;
 }
@@ -246,5 +264,92 @@
 }
 .main-title:hover::after {
 	width: 80%;
+}
+.toggle-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+.toggle-switch {
+  width: 78px;
+  height: 32px;
+  background-color: #CCC;
+  border-radius: 16px;
+  position: relative;
+  transition: var(--transition-duration);
+  cursor: pointer;
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+.toggle-switch::before {
+  content: "\f00d";
+  font-weight: 900;
+  font-family: var(--awesome-family);
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 4px;
+  top: 4px;
+  border-radius: 50%;
+  transition-duration: var(--transition-duration);
+  color: #AAA;
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+  color: var(--blue-color);
+  content: "\f00c";
+  left: 50px;
+}
+.custom-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none
+}
+.custom-checkbox + .custom-label {
+	padding-left: 30px;
+  cursor: pointer;
+  position: relative; 
+}
+.custom-checkbox + .custom-label::before {
+  content: "";
+  height: 17px;
+  width: 17px;
+  border: 2px solid #CCC;
+  left: 0px;
+  position: absolute;
+  border-radius: 6px;
+  transition-duration: 0.7s;
+}
+.custom-checkbox + .custom-label::after {
+  content: "\f00c";
+  font-family: var(--awesome-family);
+  font-weight: 900;
+  color: white;
+  background-color: var(--blue-color);
+  position: absolute;
+  left: 0px;
+  padding: 0px;
+  height: 17px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  z-index: -1;
+  transition-duration: 0.7s;
+  transform: scale(0) rotate(360deg);
+  border-radius: 6px;
+} 
+.custom-checkbox:checked + .custom-label::before {
+  border-color: var(--blue-color);
+}
+.custom-checkbox:checked + .custom-label::after {
+  z-index: 0;
+  transform: scale(1) rotate(0deg);
+  border: none;
 }
 /* #endregion End Components */

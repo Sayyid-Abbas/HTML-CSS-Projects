@@ -46,12 +46,11 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  /* font-family: "Open Sans", sans-serif; */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
 }
 /* #endregion Global Rules */
-/* #region Start Page */
+/* #region Start Dashboard Page */
 .page {
   min-height: 100vh;
   background-color: #F1F5F9;
@@ -78,7 +77,7 @@ body {
 }
 @media (min-width: 767px) {
   .sidebar > ul li {
-    width: 170px;
+    width: 190px;
   }
   .sidebar > ul > h3::before,
   .sidebar > ul > h3::after {
@@ -278,7 +277,7 @@ header .icons img {
 .yearly-targets .box .progress .line div span::before {
   content: "";
   position: absolute;
-  bottom: -14px;
+  bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
   border-width: 7px;
@@ -623,7 +622,168 @@ link #0077b5
 }
 /* #endregion End Projects Table */
 /* #endregion End Content */
-/* #endregion End Page */
+/* #endregion End Dashboard Page */
+/* #region Start Settings Page */
+.settings-page {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .settings-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-right: 10px;
+    margin-left: 10px;
+    gap: 10px;
+  }
+}
+/* #region Start Site Control */
+.site-control textarea {
+  height: 150px;
+  resize: none;
+  border: 1px solid #DDD;
+}
+@media (max-width: 767px) {
+  .site-control .website-control .label p {
+    font-size: 12px;
+  }
+}
+/* #endregion End Site Contro */
+/* #region Start Genral Info */
+.genral-info input {
+  border: 1px solid #CCC;
+}
+.genral-info input[type="email"] {
+  opacity: 0.5;
+  background-color: #e9e9e9;
+}
+/* #endregion End Genral Info */
+/* #region Start Security Info */
+.security-info .box:not(:last-of-type) {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #DDD;
+}
+.security-info .box:not(:last-of-type) .button a {
+  transition-duration: var(--transition-duration);
+  padding: 6px 10px;
+}
+.security-info .box:not(:last-of-type) .button:hover a {
+  background-color: var(--blue-alt-color);
+}
+.security-info .box .grey a {
+  transition-duration: var(--transition-duration);
+}
+.security-info .box .grey:hover a {
+  background-color: #DDD;
+}
+/* #endregion End Security Info */
+/* #region Start Social Information */
+.social-info .box  {
+  height: 40px;
+  overflow: hidden;
+  border: 1px solid #CCC;
+}
+.social-info .box i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  background-color: #f8f8f8;
+  height: 40px;
+  width: 40px;
+  border-right: 1px solid #CCC;
+}
+/* #endregion End Social Information */
+/* #region Start Widgets Control*/
+
+/* #endregion End Widgets Control*/
+/* #region Start Backup Manager */
+.backup-manager .time input {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+.backup-manager .time label {
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 30px;
+}
+.backup-manager .date {
+  border-bottom: 1px solid #CCC;
+}
+.backup-manager .time label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  outline: 2px solid var(--grey-color);
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.backup-manager .time input:checked + label::before {
+  outline-color: var(--blue-color);
+}
+.backup-manager .time label::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: transparent;
+  left: 3.3px;
+  top: 3.5px;
+  transform: scale(0);
+  transition-duration: var(--transition-duration);
+}
+.backup-manager .time input:checked + label::after {
+  transform: scale(1);
+  background-color: var(--blue-color);
+}
+.backup-manager .location {
+  margin-top: 40px;
+}
+.backup-manager .location .box input {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+.backup-manager .location .box label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  border: 2px solid #CCC;
+  text-align: center;
+  width: 130px;
+  height: 80px;
+  border-radius: 10px;
+  flex-direction: column;
+}
+.backup-manager .location .box input:checked + label {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
+@media (max-width: 767px) {
+  .backup-manager .location {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .backup-manager .location .box {
+    width: 100%;
+  }
+  .backup-manager .location .box label {
+    width: 100%;
+  }
+}
+/* #endregion End Backup Manager */
+/* #endregion End Settings Page */
 /* #region Start Animation */
 @keyframes change-background {
   100% {
