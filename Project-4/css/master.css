@@ -714,27 +714,27 @@ link #0077b5
 .backup-manager .date {
   border-bottom: 1px solid #CCC;
 }
-.backup-manager .time label::before {
+.backup-manager .time label::before,
+.backup-manager .time label::after {
   content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.backup-manager .time label::before {
   width: 18px;
   height: 18px;
-  border-radius: 50%;
   background-color: white;
   outline: 2px solid var(--grey-color);
   left: 0px;
   top: 50%;
   transform: translateY(-50%);
-  position: absolute;
 }
 .backup-manager .time input:checked + label::before {
   outline-color: var(--blue-color);
 }
 .backup-manager .time label::after {
-  content: "";
   width: 12px;
-  height: 12px;
-  position: absolute;
-  border-radius: 50%;
+  height: 12px;;
   background-color: transparent;
   left: 3.3px;
   top: 4.5px;
@@ -784,6 +784,121 @@ link #0077b5
 }
 /* #endregion End Backup Manager */
 /* #endregion End Settings Page */
+/* #region Start Profile Page */
+/* #region Start Profile */
+.profile .box {
+  flex-direction: column;
+  padding: 20px 50px;
+}
+.profile .box img {
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #DDD;
+}
+.profile .info {
+  border-left: 1px solid #e8e8e8;
+}
+.profile .info .holder {
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .profile {
+    flex-direction: column;
+  }
+  .profile .info .holder {
+    text-align: center;
+  }
+}
+.profile .info .holder:not(:last-of-type) {
+  border-bottom: 1px solid #e8e8e8;
+}
+.profile  h3:not(.first) {
+  margin-bottom: -10px;
+}
+.profile .box h3 + p {
+  position: relative;
+  margin-bottom: 40px;
+}
+.profile .box h3 + p::before,
+.profile .box h3 + p::after {
+  content: "";
+  height: 5px;
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: -20px;
+  border-radius: 5px;
+
+}
+.profile .box h3 + p::before {
+  width: 150px;
+  left: 50%;
+  background-color: #e1e1e1;
+}
+.profile .box h3 + p::after {
+  width: 100px;
+  left: 0px;
+  background-color: var(--blue-color);
+}
+.profile .box ul li i {
+  font-size: 14px;
+}
+.profile .info .holder .part {
+  min-width: 250px;
+}
+.profile label {
+  min-width: 250px;
+}
+.profile label .toggle-switch {
+  width: 68px;
+  height: 22px;
+}
+.profile label .toggle-switch::before {
+  font-size: 10px;
+  width: 14px;
+  height: 14px;
+}
+/* #endregion End Profile */
+/* #region Start Other Data */
+@media (max-width: 911px) {
+  .other-data {
+    flex-direction: column;
+  }
+}
+/* #region Start My Skills */
+.my-skills .holder {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+/* #endregion End My Skills */
+/* #region Start Latest Activites */
+.latest-activites .box {
+  padding: 15px 0px;
+}
+.latest-activites .box .act img {
+  width: 60px;
+}
+.latest-activites .box:not(.last) {
+  border-bottom: 1px solid #e7e7e7;
+}
+@media (max-width: 991px) {
+  .latest-activites .box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .latest-activites .box .act {
+    flex-direction: column;
+  }
+  .latest-activites .box .act img {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+  .latest-activites .box .act .text p {
+    margin-bottom: 10px;
+  }
+}
+/* #endregion End Latest Activites */
+/* #endregion End Other Data */
+/* #region Start Profile Page */
 /* #region Start Animation */
 @keyframes change-background {
   100% {

@@ -24,11 +24,20 @@
 .flex-1 {
 	flex: 1;
 }
+.flex-2 {
+  flex-grow: 2;
+}
 .d-grid {
 	display: grid;
 }
+.gap-5 {
+  gap: 5px;
+}
 .gap-20 {
 	gap: 20px;
+}
+.gap-40 {
+  gap: 40px;
 }
 .d-block {
 	display: block;
@@ -58,11 +67,17 @@
 .p-20 {
 	padding: 20px;
 }
+.pt-0 {
+  padding-top: 0px;
+}
 .pt-5 {
 	padding-top: 5px;
 }
 .pt-20 {
 	padding-top: 20px;
+}
+.pb-0 {
+  padding-bottom: 0px;
 }
 .pb-5 {
 	padding-bottom: 5px;
@@ -99,6 +114,9 @@
 }
 .mr-20 {
 	margin-right: 20px;
+}
+.mb-0 {
+  margin-bottom: 0px;
 }
 .mb-10 {
 	margin-bottom: 10px;
@@ -314,15 +332,19 @@
   cursor: pointer;
   position: relative; 
 }
+.custom-checkbox + .custom-label::before,
+.custom-checkbox + .custom-label::after {
+	height: 17px;
+	transition-duration: 0.7s;
+	border-radius: 6px;
+	position: absolute;
+  left: 0px;
+	
+}
 .custom-checkbox + .custom-label::before {
   content: "";
-  height: 17px;
   width: 17px;
   border: 2px solid #CCC;
-  left: 0px;
-  position: absolute;
-  border-radius: 6px;
-  transition-duration: 0.7s;
 }
 .custom-checkbox + .custom-label::after {
   content: "\f00c";
@@ -330,19 +352,14 @@
   font-weight: 900;
   color: white;
   background-color: var(--blue-color);
-  position: absolute;
-  left: 0px;
   padding: 0px;
-  height: 17px;
   width: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   z-index: -1;
-  transition-duration: 0.7s;
   transform: scale(0) rotate(360deg);
-  border-radius: 6px;
 } 
 .custom-checkbox:checked + .custom-label::before {
   border-color: var(--blue-color);
