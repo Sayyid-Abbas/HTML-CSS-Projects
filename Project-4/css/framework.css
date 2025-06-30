@@ -103,11 +103,17 @@
 .mt-0 {
 	margin-top: 0;
 }
+.mt-5 {
+	margin-top: 5px;
+}
 .mt-10 {
 	margin-top: 10px;
 }
 .mt-20 {
 	margin-top: 20px;
+}
+.mr-5 {
+	margin-right: 5px;
 }
 .mr-10 {
 	margin-right: 10px;
@@ -213,6 +219,12 @@
 }
 .fw-bold {
 	font-weight: bold;
+}
+.fs-12 {
+	font-size: 12px;
+}
+.fs-13 {
+	font-size: 13px;
 }
 .fs-14 {
 	font-size: 14px;

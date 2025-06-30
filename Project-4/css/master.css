@@ -898,8 +898,289 @@ link #0077b5
 }
 /* #endregion End Latest Activites */
 /* #endregion End Other Data */
-/* #region Start Profile Page */
+/* #endregion End Profile Page */
+/* #region Start Projects Page */
+.projects-page {
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+@media (max-width: 767px) {
+  .projects-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin: 20px 10px;
+    gap: 10px;
+  }
+}
+.projects-page .images img {
+  width: 35px;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-right: -15px;
+  border: 2px solid white;
+}
+.projects-page .images img:hover {
+  z-index: 1;
+}
+.projects-page .skills {
+  justify-content: flex-end;
+  gap: 5px;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.projects-page .skills .skill {
+  font-size: 12px;
+}
+.projects-page .progress {
+  padding-top: 20px;
+}
+.projects-page .progress .prog {
+  height: 7px;
+  border-radius: 5px;
+  width: 200px;
+}
+.projects-page .progress .prog span {
+  border-radius: 5px;
+  display: block;
+  height: 7px;
+  z-index: 1;
+}
+.projects-page .date {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+/* #endregion End Projects Page */
+/* #region Start Friends Page */
+.friends-page {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+@media (max-width: 767px) {
+  .friends-page {
+    gap: 10px;
+    margin: 20px 10px;
+  }
+}
+.friends-page .contact {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.friends-page .contact i {
+  margin-right: 5px;
+  background-color: #EEE;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  color: var(--grey-color);
+  transition-duration: var(--transition-duration);
+}
+.friends-page .contact i:hover {
+  background-color: var(--blue-color);
+  color: white;
+}
+.friends-page .friend .image {
+  justify-content: center;
+  padding-top: 20px;
+}
+.friends-page .friend .image img {
+  width: 90px;
+  border-radius: 50%;
+}
+.friends-page .friend .name {
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 15px;
+}
+.friends-page .friend .stats {
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 15px;
+}
+.friends-page .friend .stats > div {
+  padding-bottom: 0px;
+}
+.friends-page .friend .stats .vip {
+  display: none;
+}
+.friends-page .friend .stats .vip.active {
+  display: block;
+  position: absolute; 
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--orange-color );
+  opacity: 20%;
+  font-size: 40px;
+  font-weight: bold;
+}
+.friends-page .friend .actions .prof-remove {
+  gap: 10px;
+}
+.friends-page .friend .actions .prof-remove a {
+  padding: 5px 7px;
+}
+/* #endregion End Friends Page */
+/* #region Start Files Page */
+.files-page {
+ align-items: flex-start;
+ flex-direction: row-reverse;
+}
+@media (max-width: 767px) {
+  .files-page {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .files-page .upload {
+    width: 100%;
+  }
+}
+.files {
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  flex: 1;
+}
+.files .file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.files .file > i {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 12px;
+}
+.files .file img {
+  width: 60px;
+  padding-top: 20px;
+  margin-bottom: 15px;
+  transition-duration: var(--transition-duration);
+}
+.files .file:hover img {
+  transform: rotate(5deg);
+}
+.files .file .date-size {
+  border-top: 1px solid #EEE;
+  padding-top: 10px;
+}
+.files-page .upload {
+  min-width: 250px;
+}
+.files-page .upload .row {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border: 1px solid #EEE;
+  margin-bottom: 10px;
+  transition-duration: var(--transition-duration);
+}
+.files-page .upload .row:hover {
+  background-color: #f2f2f2;
+}
+.files-page .upload .row i {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.files-page .upload .row .blue {
+  background-color: var(--blue-color-light);
+}
+.files-page .upload .row .green {
+  background-color: var(--green-color-light);
+}
+.files-page .upload .row .red {
+  background-color: var(--red-color-light);
+}
+.files-page .upload .row .orange {
+  background-color: var(--orange-color-light);
+}
+.files-page .upload .button {
+  margin: 10px auto;
+  display: block;
+  width: fit-content;
+  padding-left: 30px;
+  transition-duration: var(--transition-duration);
+}
+.files-page .upload .container {
+  width: fit-content;
+  position: relative;
+  margin: 0px auto;
+}
+.files-page .upload .container i {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+}
+.files-page .upload .button:hover {
+  background-color: var(--blue-alt-color);
+}
+.files-page .upload .button:hover + i {
+  animation-name: up;
+  animation-iteration-count: infinite;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+/* #endregion End Files Page */
+/* #region Start Courses Page */
+.courses-page {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+@media (max-width: 767px) {
+  .courses-page {
+    gap: 10px;
+    margin: 20px 10px;
+  }
+}
+.courses-page .image > img {
+  max-width: 100%;
+}
+.courses-page .image img:last-of-type {
+  width: 60px;
+  left: 20px;
+  top: 20px;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.courses-page .info {
+  border-bottom: 1px solid #EEE;
+  margin-bottom: 20px;
+}
+.courses-page .info .more-info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition-duration: var(--transition-duration);
+}
+.courses-page .info .more-info:hover {
+  background-color: var(--blue-alt-color);
+}
+.courses-page .veiws-price {
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* #endregion End Courses Page */
 /* #region Start Animation */
+@keyframes up {
+  0%, 100% {
+    top: 7px;
+    left: 7px;
+  }
+  50% {
+    top: 2px;
+    left: 7px;
+  }
+}
 @keyframes change-background {
   100% {
     background-color: white;
