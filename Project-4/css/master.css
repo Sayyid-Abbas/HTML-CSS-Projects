@@ -1024,6 +1024,47 @@ link #0077b5
   padding: 5px 7px;
 }
 /* #endregion End Friends Page */
+/* #region Start Courses Page */
+.courses-page {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+@media (max-width: 767px) {
+  .courses-page {
+    gap: 10px;
+    margin: 20px 10px;
+  }
+}
+.courses-page .image > img {
+  max-width: 100%;
+}
+.courses-page .image img:last-of-type {
+  width: 60px;
+  left: 20px;
+  top: 20px;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.courses-page .info {
+  border-bottom: 1px solid #EEE;
+  margin-bottom: 20px;
+}
+.courses-page .info .more-info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition-duration: var(--transition-duration);
+}
+.courses-page .info .more-info:hover {
+  background-color: var(--blue-alt-color);
+}
+.courses-page .veiws-price {
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* #endregion End Courses Page */
 /* #region Start Files Page */
 .files-page {
  align-items: flex-start;
@@ -1129,47 +1170,67 @@ link #0077b5
   animation-direction: alternate;
 }
 /* #endregion End Files Page */
-/* #region Start Courses Page */
-.courses-page {
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+/* #region Start Plans Page */
+.plans {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 }
 @media (max-width: 767px) {
-  .courses-page {
+  .plans {
+    grid-template-columns: minmax(250px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
     gap: 10px;
-    margin: 20px 10px;
   }
 }
-.courses-page .image > img {
-  max-width: 100%;
+.plans .plan {
+  box-shadow: 0px 0px 10px #DDD;
+  -webkit-box-shadow: 0px 0px 10px #DDD;
+  -moz-box-shadow: 0px 0px 10px #DDD;
 }
-.courses-page .image img:last-of-type {
-  width: 60px;
-  left: 20px;
-  top: 20px;
-  position: absolute;
-  border-radius: 50%;
-  border: 2px solid white;
+.plans .plan .price {
+  flex-direction: column;
 }
-.courses-page .info {
-  border-bottom: 1px solid #EEE;
+.plans .plan:nth-child(1) .price {
+  border: 3px solid white ;
+  outline: 3px solid var(--green-color);  
+}
+.plans .plan:nth-child(2) .price {
+  border: 3px solid white ;
+  outline: 3px solid var(--blue-color);  
+}
+.plans .plan:nth-child(3) .price {
+  border: 3px solid white ;
+  outline: 3px solid var(--orange-color);  
+}
+.plans .plan .price h3:first-of-type {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.plans .plan .price h3:last-of-type {
+  font-size: 40px;
+  margin: 0;
+  font-weight: normal;
   margin-bottom: 20px;
 }
-.courses-page .info .more-info {
+.plans .plan .price h3:last-of-type span {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  transition-duration: var(--transition-duration);
+  font-size: 20px;
+  top: -1px;
+  left: -12px;
 }
-.courses-page .info .more-info:hover {
-  background-color: var(--blue-alt-color);
+.plans .plan ul li {
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
-.courses-page .veiws-price {
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+.plans .plan .join {
+  margin-top: 10px;
+  padding-bottom: 5px;
 }
-/* #endregion End Courses Page */
+.plans .plan .join a {
+  padding: 5px 10px;
+}
+/* #endregion End Plans Page */
 /* #region Start Animation */
 @keyframes up {
   0%, 100% {
