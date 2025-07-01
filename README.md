@@ -8,19 +8,19 @@ I do not claim ownership of the original design concepts — only the code is mi
 
 ## Projects & Credits
 
-### 1. **Project One Name**
+### 1. **Project One**
 - **Design Source:** [Leon PSD Agency Template](https://www.graphberry.com/item/leon-psd-agency-template) from Graphberry
 
 
-### 2. **Project Two Name**
+### 2. **Project Two**
 - **Design Source:** [Kasper - One Page Creative PSD Template](https://www.graphberry.com/item/kasper-one-page-psd-template) from Graphberry
  
 
-### 3. **Project Three Name**
+### 3. **Project Three**
 - **Design Source:** [Osama Elzero - Elzero Web School](https://elzero.org/)
 
 
-### 4. **Project Four Name**
+### 4. **Project Four**
 - **Design Source:** [Osama Elzero - Elzero Web School](https://elzero.org/)
 
 
