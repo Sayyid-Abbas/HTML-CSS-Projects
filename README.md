@@ -8,19 +8,19 @@ I do not claim ownership of the original design concepts — only the code is mi
 
 ## Projects & Credits
 
-### 1. [**Project One**](https://sayyid-abbas.github.io/HTML-CSS-Projects/Project-1/))
+### 1. [**Project One**](https://sayyid-abbas.github.io/HTML-CSS-Projects/Project-1/)
 - **Design Source:** [Leon PSD Agency Template](https://www.graphberry.com/item/leon-psd-agency-template) from Graphberry
 
 
-### 2. [**Project Two**](https://sayyid-abbas.github.io/HTML-CSS-Projects/Project-2/))
+### 2. [**Project Two**](https://sayyid-abbas.github.io/HTML-CSS-Projects/Project-2/)
 - **Design Source:** [Kasper - One Page Creative PSD Template](https://www.graphberry.com/item/kasper-one-page-psd-template) from Graphberry
  
 
-### 3. [**Project Three**](https://sayyid-abbas.github.io/HTML-CSS-Projects/Project-3/))
+### 3. [**Project Three**](https://sayyid-abbas.github.io/HTML-CSS-Projects/Project-3/)
 - **Design Source:** [Osama Elzero - Elzero Web School](https://elzero.org/)
 
 
-### 4. [**Project Four**](https://sayyid-abbas.github.io/HTML-CSS-Projects/Project-4/))
+### 4. [**Project Four**](https://sayyid-abbas.github.io/HTML-CSS-Projects/Project-4/)
 - **Design Source:** [Osama Elzero - Elzero Web School](https://elzero.org/)
 
 
