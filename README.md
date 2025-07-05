@@ -1,6 +1,6 @@
 # HTML & CSS Projects
 
-These projects are complete HTML and CSS implementations coded entirely by me.  
+These projects are complete HTML, CSS and Js (for project-3) implementations coded entirely by me.  
 However, the UI/UX designs and template concepts for each project are based on existing designs created by others.  
 I do not claim ownership of the original design concepts — only the code is mine.
 

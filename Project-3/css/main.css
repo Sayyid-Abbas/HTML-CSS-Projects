@@ -202,6 +202,9 @@ header .container .main-nav > li > a::after {
 header .container .main-nav > li > a:hover::after {
   width: 100%;
 }
+header .container .other {
+  cursor: pointer;
+}
 header .container .other-links {
   visibility: hidden;
   z-index: 2;
@@ -223,21 +226,18 @@ header .container .other-links {
     flex-direction: column;
   }
 }
-header .container .main-nav .other:hover + .other-links,
-header .container .main-nav .other-links:hover {
+header .container .main-nav .other-links.show {
   visibility: visible;
   bottom: -377px;
-  opacity: 100%;
+  opacity: 1;
 }
 @media (max-width: 991px) {
-header .container .main-nav .other:hover + .other-links,
-header .container .main-nav .other-links:hover {
+header .container .main-nav .other-links.show {
   bottom: -349px;
   }
 }
 @media (max-width: 767px) {
-header .container .main-nav .other:hover + .other-links,
-header .container .main-nav .other-links:hover {
+header .container .main-nav .other-links.show {
   bottom: -581px;
   padding-bottom: 0;
   }
