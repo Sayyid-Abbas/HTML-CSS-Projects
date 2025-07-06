@@ -20,7 +20,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 @media (min-width: 768px) { 
   .container {
     width: 750px;
@@ -100,6 +99,9 @@ header .container .links .icon span:nth-child(2) {
 header .container .links .icon span:last-child {
   width: 100%;
 }
+header .links {
+  cursor: pointer;
+}
 header  .links ul {
   display: block;
   margin: 0;
@@ -112,7 +114,7 @@ header  .links ul {
   background-color: #EEE;
   display: none;
 }
-header .links:hover ul{
+header .links.show ul {
   display: block;
 }
 header .links ul::before {
