@@ -1,4 +1,4 @@
-# HTML & CSS Projects
+# HTML & CSS Projects & JS
 
 These projects are complete HTML, CSS and Js implementations coded entirely by me.  
 However, the UI/UX designs and template concepts for each project are based on existing designs created by others.  
