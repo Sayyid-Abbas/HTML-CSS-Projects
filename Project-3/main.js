@@ -29,3 +29,47 @@ window.onscroll = function() {
 
 // Scrolling up on click
 myButton.onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
+
+
+// Latest Events Section
+// Making a countdown
+
+let finishDate = new Date("Dec 31, 2029 23:59:59");
+
+setInterval(() => {
+    let seconds = document.querySelector(".seconds");
+    let minutes = document.querySelector(".minutes");
+    let hours = document.querySelector(".hours");
+    let days = document.querySelector(".days");
+
+    let remaindTime = finishDate.getTime() - Date.now();
+
+    let day = Math.floor(remaindTime / (1000 * 60 * 60 * 24));
+
+    let hour = Math.floor(remaindTime % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+
+    let minute = Math.floor(remaindTime % (1000 * 60 * 60) / (1000 * 60));
+
+    let second = Math.floor(remaindTime % (1000 * 60) / (1000));
+
+    seconds.textContent = second > 9? second : `0${second}`;
+    hours.textContent = hour > 9? hour : `0${hour}`;
+    minutes.textContent = minute > 9? minute : `0${minute}`;
+    days.textContent = day > 9? day : `0${day}`;
+    if (remaindTime <= 0) {
+        clearInterval(timer); 
+        days.textContent = hours.textContent = minutes.textContent = seconds.textContent = "00";
+        return;
+    }
+}, 1000);
+
+// Our Skills Section
+// Making the progress line git filled when we reach it
+
+let section = document.querySelector(".our-skills");
+let prog = document.querySelectorAll(".our-skills .progress .prog .line span");
+document.onscroll = function() {
+    if(window.scrollY >= section.offsetTop - 500) {
+        prog.forEach(progress => progress.style.width = progress.dataset.width);
+    }
+};
