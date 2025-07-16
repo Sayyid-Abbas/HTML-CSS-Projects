@@ -43,3 +43,87 @@ function showData(className) {
     });
     document.querySelectorAll(className).forEach(li => li.style.display = "block");
 };
+
+
+// Adding Sliding For Landing
+
+    let section = document.querySelector(".landing");
+    let slides = Array.from(document.querySelectorAll(".landing .content"));
+    let next = document.querySelector(".right");
+    let prev = document.querySelector(".left");
+
+let slidesCount = slides.length;
+let currentSlide = 1;   
+
+
+// Make Bullets On The Slides Count
+let bullets = document.createElement("div");
+bullets.className = "bullets";
+
+for(let i = 1; i <= slidesCount; i++) {
+    let bullet = document.createElement("div");
+
+    bullet.className = "bullet";
+    bullet.setAttribute("data-index", i);
+
+    bullets.appendChild(bullet);
+}
+section.appendChild(bullets);
+
+let bulletsItems = document.querySelectorAll(".bullet");
+
+// Bullets On Click
+document.addEventListener("click", (e) => {
+    bulletsItems.forEach((bullet) => {
+        if(bullet.contains(e.target)) {
+            currentSlide = e.target.dataset.index;
+            setAll();
+        }
+    });
+});
+
+// Next And Prev On Click
+next.onclick = () => {
+    if(currentSlide != slidesCount) {
+        currentSlide++;
+        setAll();
+    }
+};
+prev.onclick = () => {
+    if(currentSlide != 1) {
+        currentSlide--;
+        setAll();
+    }
+}
+
+// Set All Active And Remove
+setAll();
+
+
+// Set All Function
+function setAll() {
+    // Setting And Removing Acitve For Bullets
+    bulletsItems.forEach(bullet => bullet.classList.remove("active"));
+    bulletsItems.forEach((bullet) => {
+        if(bullet.dataset.index == currentSlide) {
+            bullet.classList.add("active");
+        }
+    });
+
+    // Setting And Remove Disabled For Next And Prev
+    if(currentSlide == 1) {
+        prev.classList.add("disabled");
+    } else {
+        prev.classList.remove("disabled");
+    }
+
+    if(currentSlide == slidesCount) {
+        next.classList.add("disabled");
+    } else {
+        next.classList.remove("disabled");
+    }
+
+    // Setting The Slides
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[currentSlide - 1].classList.add("active");
+}
