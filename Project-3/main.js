@@ -73,3 +73,29 @@ document.onscroll = function() {
         prog.forEach(progress => progress.style.width = progress.dataset.width);
     }
 };
+
+
+// Stats Section
+// Making the numbers go up when we reach them
+
+let statsSection = document.querySelector(".stats");
+let numbers = document.querySelectorAll(".stats .container .box .card .number");
+let started = false;
+
+window.onscroll = function() {
+    if(window.scrollY >= statsSection.offsetTop - 700) {
+        if(!started) {
+            numbers.forEach(number => setNumber(number));
+        }
+        started = true;
+    }
+};
+function setNumber(number) {
+    let goal = number.dataset.number;
+    let count = setInterval(() => {
+        number.textContent++;
+        if(number.textContent == goal) {
+            clearInterval(count);
+        }
+    }, 2000 / goal);
+}
