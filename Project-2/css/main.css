@@ -746,6 +746,28 @@ header .container nav .bars {
   color: #777;
   margin-bottom: 25px;
 }
+.our-skills .container .testimonials {
+  overflow: hidden;
+}
+.our-skills .container .testimonials .info-box {
+  width: 0px;
+  max-width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.8s, position 0s;
+  position: absolute;
+  opacity: 0;
+}
+.our-skills .container .testimonials .info-box.active {
+  width: 500px;
+  transform: scaleX(1);
+  position: relative;
+  opacity: 1;
+}
+@media (max-width: 992px) {
+  .our-skills .container .testimonials .info-box.active {
+    width: 100%;
+  }
+}
 .our-skills .container .testimonials .info-box .person {
   display: flex;
   justify-content: center;
@@ -782,20 +804,21 @@ header .container nav .bars {
   text-align: right;
   font-size: 15px;
 }
-.our-skills .container .testimonials .info-box .dots {
+.our-skills .container .testimonials .dots {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 85px;
+  margin-bottom: 85px;
 }
-.our-skills .container .testimonials .info-box .dots li {
-  width: 15px;
-  height: 15px;
+.our-skills .container .testimonials .dots li {
+  width: 20px;
+  height: 20px;
   border: 1px solid #777;
   border-radius: 50%;
+  cursor: pointer;
 }
-.our-skills .container .testimonials .info-box .dots li:nth-child(2) {
+.our-skills .container .testimonials .dots li.active {
   background-color: var(--main-color);
   border-color: var(--main-color);
 }
@@ -817,9 +840,10 @@ header .container nav .bars {
   display: block;
   height: 30px;
   background-color: var(--main-color);
+  transition-duration: 1s;
 }
 .our-skills .skills .prog-holder .prog span::before {
-  content: attr(data-progress);
+  content: attr(data-percent)"%";
   background-color: black;
   color: white;
   padding: 2px 3px;
@@ -888,6 +912,10 @@ header .container nav .bars {
   background-color: #fcfcfc;
   text-align: center;
   padding-bottom: 30px;
+  transition-duration: 0.3s;
+}
+.pricing .container .plan-box .plan-info:hover {
+  transform: translateY(-10px);
 }
 .pricing .container .plan-box .plan-info .plan {
   padding: 35px 20px;
@@ -941,6 +969,7 @@ header .container nav .bars {
 .pricing .container .plan-box .plan-info .bottom p  {
   border: 1px solid var(--main-color);
   width: fit-content;
+  border-radius: 5px;
 }
 .pricing .container .plan-box .plan-info .bottom p a {
   width: 100%;
@@ -949,6 +978,11 @@ header .container nav .bars {
   display: block;
   height: 100%;
   padding: 16px;
+  transition-duration: 0.3s;
+}
+.pricing .container .plan-box .plan-info .bottom p a:hover {
+  background-color: var(--main-color);
+  color: white;
 }
 .pricing .container h3:last-of-type {
   font-weight: normal;
@@ -962,11 +996,27 @@ header .container nav .bars {
   background-color: var(--main-color);
   padding: 10px 0;
   border-radius: 4px;
+  transition: 0.3s;
+}
+.pricing .container h3:last-of-type + .contact-us:hover {
+  background-color: #00b3e4;
 }
 .pricing .container h3:last-of-type + .contact-us a {
   padding: 10px 20px;
   text-decoration: none;
   color: white;
+}
+@media (max-width: 767px) {
+  .pricing .container .plan-box .plan-info:hover {
+    transform: translateY(0px);
+  }
+  .pricing .container .plan-box .plan-info .bottom p a:hover {
+    background-color: transparent;
+    color: black;
+  }
+  .pricing .container h3:last-of-type + .contact-us:hover {
+    background-color: var(--main-color);
+  }
 }
 /* End Pricing */
 /* Start Subscribe */
@@ -1032,6 +1082,11 @@ header .container nav .bars {
   border: 1px solid white;
   border-left-color: transparent;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.subscribe .container form input[type="submit"]:hover {
+  background-color: #00b3e4;
 }
 .subscribe .container form input[type="email"]:focus,
 .subscribe .container form input[type="submit"]:focus {
@@ -1043,6 +1098,11 @@ header .container nav .bars {
 .subscribe .container p {
   margin-left: 50px;
   line-height: 2;
+}
+@media (max-width: 767px) {
+  .subscribe .container form input[type="submit"]:hover {
+    background-color: var(--main-color);
+  }
 }
 /* End Subscribe */
 /* Start Contact */
@@ -1095,6 +1155,11 @@ header .container nav .bars {
   color: white;
   padding: 10px 20px;
   right: 0;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.contact .container section form input[type="submit"]:hover {
+  background-color: #00b3e4;
 }
 .contact .container section .info .address h3,
 .contact .container section .info .numbers h3 {
@@ -1107,6 +1172,11 @@ header .container nav .bars {
   line-height: 1.9;
   color: #777;
   font-style: italic;
+}
+@media (max-width: 767px) {
+  .contact .container section form input[type="submit"]:hover {
+    background-color: var(--main-color);
+  }
 }
 /* End Contact */
 /* Start Footer */
@@ -1163,8 +1233,27 @@ footer .container .social ul {
 footer .container .social ul li i {
   font-weight: normal;
 }
+footer .container .social ul li a {
+  color: white;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+}
+footer .container .social ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.505);
+}
 footer .container .copyright span {
   color: var(--main-color);
   font-weight: bold;
+}
+@media (max-width: 767px) {
+  footer .container .social ul li a {
+    background-color: rgba(0, 0, 0, 0.505);
+  }
 }
 /* End Footer */
