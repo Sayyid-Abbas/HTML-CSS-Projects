@@ -570,15 +570,25 @@ header .container nav .bars {
 .portfolio .image-container .box .caption p {
   color: var(--main-color);
 }
-.portfolio .bottom {
+.portfolio .button {
   background-color: var(--main-color);
   margin: 30px auto 0;
   text-align: center;
   width: fit-content;
   padding: 15px 20px;
   font-size: 17px;
+  border-radius: 6px;
+  transition-duration: 0.3s;
 }
-.portfolio .bottom a {
+.portfolio .button:hover {
+  background-color: #00b3e4;
+}
+@media (max-width: 767px) {
+  .portfolio .button:hover {
+    background-color: var(--main-color);
+  }
+}
+.portfolio .button a {
   color: white;
   font-weight: normal;
   text-transform: uppercase;
@@ -622,16 +632,32 @@ header .container nav .bars {
   margin-bottom: 30px;
   text-transform: capitalize;
 }
-.video .text-box .bottom {
-  background-color: black;
-  color: white;
+.video .text-box .button {
   display: block;
-  width: fit-content;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  padding: 7px 15px;
   text-transform: uppercase;
+}
+.video .text-box .button a {
+  width: fit-content;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  display: block;
+  text-decoration: none;
+  border-radius: 6px;
+  transition-duration: 0.3s;
+}
+.video .text-box .button a:hover {
+  background-color: white;
+  color: black;
+}
+@media (max-width: 767px) {
+  .video .text-box .button a:hover {
+    background-color: black;
+    color: white;
+  }
 }
 /* End Video */
 /* Start About */
@@ -959,19 +985,19 @@ header .container nav .bars {
   left: 20%;
   bottom: 0;
 }
-.pricing .container .plan-box .plan-info .bottom {
+.pricing .container .plan-box .plan-info .button {
   border-top: 1px solid var(--main-color);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px 0;
 }
-.pricing .container .plan-box .plan-info .bottom p  {
+.pricing .container .plan-box .plan-info .button p  {
   border: 1px solid var(--main-color);
   width: fit-content;
   border-radius: 5px;
 }
-.pricing .container .plan-box .plan-info .bottom p a {
+.pricing .container .plan-box .plan-info .button p a {
   width: 100%;
   text-decoration: none;
   color: black;
@@ -980,7 +1006,7 @@ header .container nav .bars {
   padding: 16px;
   transition-duration: 0.3s;
 }
-.pricing .container .plan-box .plan-info .bottom p a:hover {
+.pricing .container .plan-box .plan-info .button p a:hover {
   background-color: var(--main-color);
   color: white;
 }
@@ -1010,7 +1036,7 @@ header .container nav .bars {
   .pricing .container .plan-box .plan-info:hover {
     transform: translateY(0px);
   }
-  .pricing .container .plan-box .plan-info .bottom p a:hover {
+  .pricing .container .plan-box .plan-info .button p a:hover {
     background-color: transparent;
     color: black;
   }
