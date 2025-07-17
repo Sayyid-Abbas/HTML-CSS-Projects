@@ -14,6 +14,10 @@ document.addEventListener("click", function (e) {
     }
 });
 
+// To Reamove The show Class On Scroll
+document.addEventListener("scroll", () => {
+    otherLinks.classList.remove("show");
+});
 // A button to scroll up
 
 let myButton = document.querySelector(".btn");

@@ -163,6 +163,7 @@ ul {
 /* #endregion End Components */
 /* #region Start Header */
 header {
+  user-select: none;
   background-color: white;
   box-shadow: 0 0 10px #ddd; 
   -webkit-box-shadow: 0 0 10px #ddd;
